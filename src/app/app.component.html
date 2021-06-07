@@ -16,3 +16,21 @@
 <div *ngIf="title === 'Opcion2'">
  <p>Este es un div 2</p>
 </div>
+<br/>
+<button (click)="addItem()">Add Items</button>
+<ul>
+  <li *ngIf="auths.length === 0">
+    List is empty
+  </li>
+  <li *ngFor = "let name of auths; index as i"> 
+    {{name}} {{i}}
+    <button (click)="delItem(i)">Delete Items</button>
+  </li>
+<ul>
+
+<div *ngFor="let product of products; index as i">
+  <img [src]="product.image" [alt]="product.title" width="20%">
+  {{product.title}}
+  {{product.price}}
+  {{product.description}}
+</div>
