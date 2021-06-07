@@ -1,2 +1,18 @@
 <input type="text" [(ngModel)]="title">
+
 {{ title }}
+
+<select name="opciones" [(ngModel)]="title">
+  <option value="Opcion1">Opcion1</option>
+  <option value="Opcion2">Opcion2</option>
+</select>
+
+
+<div *ngIf="title === 'Opcion1'">
+ <p>Este es un div 1</p>
+</div>
+
+
+<div *ngIf="title === 'Opcion2'">
+ <p>Este es un div 2</p>
+</div>
